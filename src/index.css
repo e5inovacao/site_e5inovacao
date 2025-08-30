@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Paleta de cores baseada na logo E5 Inovação */
+  --color-primary: #ff6b47; /* Coral/laranja da logo */
+  --color-primary-light: #ff8a6b;
+  --color-primary-dark: #e55a3f;
+  --color-secondary: #2d3748; /* Azul escuro da logo */
+  --color-accent: #ff6b47;
+  --color-accent-light: #ff8a6b;
+  --color-success: #10b981;
+  --color-background: #ffffff;
+  --color-background-alt: #f9fafb;
+  --color-surface: #ffffff;
+  --color-border: #e5e7eb;
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #6b7280;
+  --color-text-muted: #9ca3af;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+  }
+
+  p {
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+  }
+}
+
+@layer components {
+  .text-primary {
+    color: var(--color-text-primary);
+  }
+  
+  .text-secondary {
+    color: var(--color-text-secondary);
+  }
+  
+  .text-muted {
+    color: var(--color-text-muted);
+  }
+  
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+  
+  .bg-alt {
+    background-color: var(--color-background-alt);
+  }
+  
+  .border-subtle {
+    border-color: var(--color-border);
+  }
+  
+  .card-minimal {
+    @apply bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:border-gray-200;
+  }
+  
+  .btn-primary {
+    background-color: var(--color-primary);
+    @apply text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-primary-dark);
+  }
+  
+  .btn-primary:focus {
+    --tw-ring-color: var(--color-primary);
+  }
+  
+  .btn-secondary {
+    @apply bg-white border-2 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: white;
+  }
+  
+  .btn-secondary:focus {
+    --tw-ring-color: var(--color-primary);
+  }
+  
+  .btn-accent {
+    background-color: var(--color-secondary);
+    @apply text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-accent:hover {
+    background-color: #1a202c;
+  }
+  
+  .btn-accent:focus {
+    --tw-ring-color: var(--color-secondary);
+  }
+  
+  .section-padding {
+    @apply py-24 px-4;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
