@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   const openWhatsApp = () => {
-    const phoneNumber = '552731991336';
+    const phoneNumber = '5511999999999';
     const message = 'Olá! Gostaria de saber mais sobre os serviços da E5 Inovação.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

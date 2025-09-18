@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   const openWhatsApp = () => {
-    const phoneNumber = '552731991336';
+    const phoneNumber = '5511999999999';
     const message = 'Olá! Gostaria de saber mais sobre os serviços da E5 Inovação.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -117,7 +117,7 @@ export default function Footer() {
                 <li className="flex items-start gap-4">
                   <Phone className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-300">(27) 3199-1336</p>
+                    <p className="text-gray-300">(11) 99999-9999</p>
                     <p className="text-gray-400 text-sm">Seg-Sex, 9h às 18h</p>
                   </div>
                 </li>
@@ -185,7 +185,7 @@ export default function Footer() {
         className="fixed bottom-8 right-8 bg-primary text-white p-4 rounded-xl shadow-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-105 z-40"
         aria-label="Voltar ao topo"
       >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5" fill="none" stroke="#ff6b47" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
       </button>

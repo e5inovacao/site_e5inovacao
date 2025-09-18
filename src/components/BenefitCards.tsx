@@ -80,7 +80,7 @@ export default function BenefitCards() {
         <div className="text-center mt-20">
           <button
             onClick={() => {
-              const phoneNumber = '552731991336';
+              const phoneNumber = '5527998344720';
               const message = 'Olá! Quero esses resultados na minha empresa. Gostaria de saber mais sobre os serviços da E5 Inovação.';
               const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
               window.open(whatsappUrl, '_blank');

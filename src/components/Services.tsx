@@ -53,14 +53,14 @@ export default function Services() {
   ];
 
   const openWhatsApp = (serviceTitle: string) => {
-    const phoneNumber = '552731991336';
+    const phoneNumber = '5527998344720';
     const message = `Olá! Gostaria de saber mais sobre o serviço: ${serviceTitle}. Podem me ajudar?`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const openWhatsAppCustom = () => {
-    const phoneNumber = '552731991336';
+    const phoneNumber = '5527998344720';
     const message = 'Olá! Gostaria de solicitar uma solução personalizada para minha empresa. Podem me ajudar?';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

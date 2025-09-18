@@ -9,14 +9,14 @@ export default function Hero() {
   };
 
   const openWhatsApp = () => {
-    const phoneNumber = '552731991336';
+    const phoneNumber = '5527998344720';
     const message = 'Olá! Gostaria de conhecer as soluções da E5 Inovação em 1 minuto.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const openWhatsAppDemo = () => {
-    const phoneNumber = '552731991336';
+    const phoneNumber = '5527998344720';
     const message = 'Olá! Gostaria de agendar uma demonstração gratuita das soluções da E5 Inovação.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');

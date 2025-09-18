@@ -1,7 +1,7 @@
 import { MessageCircle, CheckCircle } from 'lucide-react';
 
 export default function ContactForm() {
-  const whatsappNumber = '552731991336'; // Número do WhatsApp (código do país + DDD + número)
+  const whatsappNumber = '5527998344720'; // Número do WhatsApp (código do país + DDD + número)
   const whatsappMessage = encodeURIComponent('Olá! Gostaria de saber mais sobre os serviços da E5 Inovação.');
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -52,7 +52,7 @@ export default function ContactForm() {
                 </div>
                 <div className="mt-4">
                   <h4 className="font-semibold text-text-primary mb-1">WhatsApp</h4>
-                  <p className="text-text-secondary">(27) 3199-1336</p>
+                  <p className="text-text-secondary">(27) 99834-4720</p>
                 </div>
               </div>
             </div>
