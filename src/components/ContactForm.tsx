@@ -22,67 +22,9 @@ export default function ContactForm() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-text-primary mb-6">
-                Fale Conosco
-              </h3>
-              <p className="text-text-secondary leading-relaxed mb-8">
-                Nossa equipe de especialistas está pronta para analisar suas necessidades e desenvolver a solução perfeita para sua empresa.
-              </p>
-            </div>
-
-            {/* Contact Methods */}
-            <div className="space-y-6">
-              <div className="card-minimal">
-                <div className="bg-gray-100 p-3 rounded-lg w-fit">
-                  <MessageCircle className="w-6 h-6 text-gray-700" />
-                </div>
-                <div className="mt-4">
-                  <h4 className="font-semibold text-text-primary mb-1">Email</h4>
-                  <p className="text-text-secondary">contato@e5inovacao.com</p>
-                </div>
-              </div>
-              
-              <div className="card-minimal">
-                <div className="p-3 rounded-lg w-fit" style={{backgroundColor: 'rgba(255, 107, 71, 0.1)'}}>
-                  <MessageCircle className="w-6 h-6" style={{color: 'var(--color-primary)'}} />
-                </div>
-                <div className="mt-4">
-                  <h4 className="font-semibold text-text-primary mb-1">WhatsApp</h4>
-                  <p className="text-text-secondary">(27) 99834-4720</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Benefits */}
-            <div className="card-minimal" style={{background: 'linear-gradient(135deg, var(--color-primary), var(--color-primary-dark))'}}>
-              <h4 className="text-xl font-bold mb-4 text-white">Por que escolher a E5?</h4>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white opacity-80" />
-                  <span className="text-white">Consultoria gratuita</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white opacity-80" />
-                  <span className="text-white">Soluções personalizadas</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white opacity-80" />
-                  <span className="text-white">Suporte contínuo</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-white opacity-80" />
-                  <span className="text-white">Resultados mensuráveis</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* WhatsApp CTA */}
-          <div className="card-minimal flex flex-col justify-center items-center text-center">
+        {/* WhatsApp CTA - Centralizado */}
+        <div className="flex justify-center">
+          <div className="card-minimal flex flex-col justify-center items-center text-center max-w-lg w-full">
             <div className="mb-8">
               <div className="p-6 rounded-full mb-6 mx-auto w-fit" style={{backgroundColor: 'rgba(255, 107, 71, 0.1)'}}>
                 <MessageCircle className="w-12 h-12" style={{color: 'var(--color-primary)'}} />
@@ -90,9 +32,7 @@ export default function ContactForm() {
               <h3 className="text-2xl font-bold text-text-primary mb-4">
                 Fale Conosco no WhatsApp
               </h3>
-              <p className="text-text-secondary leading-relaxed mb-8">
-                Converse diretamente com nossa equipe de especialistas. Resposta rápida e atendimento personalizado.
-              </p>
+              <p className="text-text-secondary leading-relaxed mb-8">Converse diretamente com nossa equipe de especialistas. Resposta rápida e atendimento personalizado.</p>
             </div>
 
             <button
