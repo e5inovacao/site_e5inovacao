@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   const openWhatsApp = () => {
-    const phoneNumber = '5511999999999';
+    const phoneNumber = '5527998344720';
     const message = 'Olá! Gostaria de saber mais sobre os serviços da E5 Inovação.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -92,14 +92,7 @@ export default function Footer() {
                     WhatsApp
                   </button>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-primary transition-colors duration-200"
-                  >
-                    Blog
-                  </a>
-                </li>
+
               </ul>
             </div>
 
@@ -117,14 +110,14 @@ export default function Footer() {
                 <li className="flex items-start gap-4">
                   <Phone className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-300">(11) 99999-9999</p>
+                    <p className="text-gray-300">(27) 99834-4720</p>
                     <p className="text-gray-400 text-sm">Seg-Sex, 9h às 18h</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
                   <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                   <div>
-                    <p className="text-gray-300">São Paulo, SP</p>
+                    <p className="text-gray-300">Serra, ES</p>
                     <p className="text-gray-400 text-sm">Atendimento nacional</p>
                   </div>
                 </li>
@@ -165,15 +158,9 @@ export default function Footer() {
               © {currentYear} E5 Inovação. Todos os direitos reservados.
             </div>
             <div className="flex gap-8 text-sm">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors duration-200">
-                Política de Privacidade
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors duration-200">
-                Termos de Uso
-              </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors duration-200">
-                Cookies
-              </a>
+              <a href="/privacy-policy" className="text-gray-400 hover:text-primary transition-colors duration-200">Política de Privacidade</a>
+              <a href="/terms-of-use" className="text-gray-400 hover:text-primary transition-colors duration-200">Termos de Uso</a>
+
             </div>
           </div>
         </div>

@@ -1,19 +1,32 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMenuOpen(false);
   };
 
   const openWhatsApp = () => {
-    const phoneNumber = '5511999999999';
+    const phoneNumber = '5527998344720';
     const message = 'Olá! Gostaria de saber mais sobre os serviços da E5 Inovação.';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
@@ -46,6 +59,16 @@ export default function Header() {
               className="text-gray-600 hover:text-gray-900 transition-colors duration-300 font-medium text-sm tracking-wide"
             >
               Serviços
+            </button>
+            <button
+              onClick={() => navigate('/sites-landing-pages')}
+              className={`transition-colors duration-300 font-medium text-sm tracking-wide ${
+                location.pathname === '/sites-landing-pages' 
+                  ? 'text-orange-500' 
+                  : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Sites & Landing Pages
             </button>
           </nav>
 
@@ -85,6 +108,16 @@ export default function Header() {
                 className="block w-full text-left px-4 py-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all duration-300 font-medium text-sm"
               >
                 Serviços
+              </button>
+              <button
+                onClick={() => navigate('/sites-landing-pages')}
+                className={`block w-full text-left px-4 py-3 rounded-xl transition-all duration-300 font-medium text-sm ${
+                  location.pathname === '/sites-landing-pages'
+                    ? 'text-orange-500 bg-orange-50'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                }`}
+              >
+                Sites & Landing Pages
               </button>
               <button
                 onClick={openWhatsApp}

@@ -106,23 +106,7 @@ export default function FAQ() {
 
         {/* CTA Section */}
         <div className="mt-20 text-center">
-          <div className="card-minimal p-10">
-            <h3 className="text-2xl font-bold text-text-primary mb-4">
-              Ainda tem dúvidas?
-            </h3>
-            <p className="text-text-secondary mb-8">
-              Entre em contato conosco pelo WhatsApp e tire todas as suas dúvidas
-            </p>
-            <a
-              href="https://wa.me/5511999999999?text=Olá! Gostaria de saber mais sobre as soluções da E5 Inovação."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary inline-flex items-center gap-2"
-            >
-              <MessageCircle className="w-5 h-5" />
-              Falar no WhatsApp
-            </a>
-          </div>
+
         </div>
       </div>
     </section>

@@ -1,6 +1,9 @@
 import { ArrowRight, CheckCircle, Users, TrendingUp, Zap } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Hero() {
+  const navigate = useNavigate();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -58,6 +61,13 @@ export default function Hero() {
                 className="btn-secondary px-8 py-4 text-base"
               >
                 Conheça em 1min
+              </button>
+              <button
+                onClick={() => navigate('/sites-landing-pages')}
+                className="btn-accent px-8 py-4 text-base flex items-center gap-2"
+              >
+                Sites & Landing Pages
+                <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>

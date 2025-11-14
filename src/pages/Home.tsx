@@ -6,8 +6,11 @@ import Services from '../components/Services';
 import FAQ from '../components/FAQ';
 import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
+  const navigate = useNavigate();
+  
   return (
     <div className="min-h-screen">
       <Header />
