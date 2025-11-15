@@ -54,13 +54,14 @@ export default function Hero() {
                 onClick={openWhatsAppDemo}
                 className="btn-primary px-8 py-4 text-base"
               >
-                Demonstração Grátis
+                Consultoria Grátis
               </button>
               <button
-                onClick={openWhatsApp}
+                onClick={() => scrollToSection('servicos')}
+                aria-label="Ir para seção de serviços de IA"
                 className="btn-secondary px-8 py-4 text-base"
               >
-                Conheça em 1min
+                Inteligência Artificial
               </button>
               <button
                 onClick={() => navigate('/sites-landing-pages')}

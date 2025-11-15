@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Div from '../components/ui/Div';
 import { useState } from 'react';
 import { CheckCircle, Clock, Shield, Monitor, Smartphone, Tablet, Code, Palette, Rocket, Users, Star, ArrowRight, Send } from 'lucide-react';
 
@@ -62,6 +63,13 @@ export default function SalesPage() {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const openWhatsAppBudget = () => {
+    const phoneNumber = '5527998344720';
+    const message = 'Olá! Gostaria de um orçamento para criação de site/landing page.';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   const benefits = [
@@ -342,8 +350,8 @@ export default function SalesPage() {
 
       {/* Contact Form Section */}
       <section id="contact-form" className="py-24 bg-white">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
+        <Div variant="container" ariaLabel="Formulário de orçamento">
+          <Div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Solicite seu Orçamento
@@ -353,147 +361,23 @@ export default function SalesPage() {
               </p>
             </div>
             
-            <form onSubmit={handleSubmit} className="card-minimal">
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Nome completo *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  />
-                </div>
+            <div className="card-minimal">
+              <div className="text-center mb-8">
+                <p className="text-lg text-gray-600">Entre em contato pelo WhatsApp para solicitar seu orçamento.</p>
               </div>
-              
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Telefone *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    required
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                    Empresa
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  />
-                </div>
+              <div className="flex justify-center">
+                <button
+                  onClick={openWhatsAppBudget}
+                  aria-label="Abrir WhatsApp para orçamento"
+                  className="btn-primary text-lg px-8 py-4 flex items-center gap-2"
+                >
+                  Solicitar Orçamento no WhatsApp
+                  <Send className="w-5 h-5" />
+                </button>
               </div>
-              
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div>
-                  <label htmlFor="websiteType" className="block text-sm font-medium text-gray-700 mb-2">
-                    Tipo de site *
-                  </label>
-                  <select
-                    id="websiteType"
-                    name="websiteType"
-                    required
-                    value={formData.websiteType}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  >
-                    <option value="">Selecione...</option>
-                    <option value="landing-page">Landing Page</option>
-                    <option value="site-institucional">Site Institucional</option>
-                    <option value="e-commerce">E-commerce</option>
-                    <option value="blog">Blog</option>
-                    <option value="outro">Outro</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
-                    Orçamento estimado
-                  </label>
-                  <select
-                    id="budget"
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  >
-                    <option value="">Selecione...</option>
-                    <option value="ate-5k">Até R$ 5.000</option>
-                    <option value="5k-10k">R$ 5.000 - R$ 10.000</option>
-                    <option value="10k-20k">R$ 10.000 - R$ 20.000</option>
-                    <option value="acima-20k">Acima de R$ 20.000</option>
-                  </select>
-                </div>
-              </div>
-              
-              <div className="mb-6">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Descreva seu projeto
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  placeholder="Conte-nos mais sobre o que você precisa..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"
-                />
-              </div>
-              
-              {submitMessage && (
-                <div className={`mb-4 p-4 rounded-xl ${submitMessage.includes('Erro') ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
-                  {submitMessage}
-                </div>
-              )}
-              
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full btn-primary text-lg py-4 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? (
-                  'Enviando...'
-                ) : (
-                  <>
-                    Enviar Solicitação
-                    <Send className="w-5 h-5" />
-                  </>
-                )}
-              </button>
-            </form>
-          </div>
-        </div>
+            </div>
+          </Div>
+        </Div>
       </section>
 
       <Footer />

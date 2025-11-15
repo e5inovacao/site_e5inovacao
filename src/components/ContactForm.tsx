@@ -1,4 +1,5 @@
 import { MessageCircle, CheckCircle } from 'lucide-react';
+import Div from '../components/ui/Div';
 
 export default function ContactForm() {
   const whatsappNumber = '5527998344720'; // Número do WhatsApp (código do país + DDD + número)
@@ -24,7 +25,7 @@ export default function ContactForm() {
 
         {/* WhatsApp CTA - Centralizado */}
         <div className="flex justify-center">
-          <div className="card-minimal flex flex-col justify-center items-center text-center max-w-lg w-full">
+          <Div variant="card" className="flex flex-col justify-center items-center text-center max-w-lg w-full">
             <div className="mb-8">
               <div className="p-6 rounded-full mb-6 mx-auto w-fit" style={{backgroundColor: 'rgba(255, 107, 71, 0.1)'}}>
                 <MessageCircle className="w-12 h-12" style={{color: 'var(--color-primary)'}} />
@@ -58,7 +59,7 @@ export default function ContactForm() {
                 <div className="text-text-secondary text-sm">Análise sem compromisso</div>
               </div>
             </div>
-          </div>
+          </Div>
         </div>
       </div>
     </section>
